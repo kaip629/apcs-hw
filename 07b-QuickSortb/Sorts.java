@@ -1,16 +1,17 @@
 import java.io.*;
 import java.util.*;
+import org.apache.commons.lang.ArrayUtils;
 public class Sorts{
     
     private static int partition(int[] a,int L, int R){
 	//partition array and return index of pivot
-	System.out.println(toString(a));
+	//System.out.println(toString(a));
 	Random rand=new Random();
 	int pivot=a[rand.nextInt(R-L)+L];
 	a[(R-L)/2]=a[R];
 	a[R]=pivot;
 	int wall=L;
-	System.out.println(toString(a));
+	//System.out.println(toString(a));
 	for(int i=L;i<R;i++){
 	    if(a[i]<pivot){
 		int temp;
@@ -24,15 +25,15 @@ public class Sorts{
 		a[R]=a[wall+1];
 		a[wall+1]=pivot;
 		}
-	System.out.println(toString(a));
+	//System.out.println(toString(a));
 	return a[wall+1];
     }
     public static int[] qSort(int[] a,int L, int R){
 		if(R<=L){
 			return a;
 		}else{
-			partition(a,L,R);
-			return qSort(a,L+1,R-1);
+			int[] result=ArrayUtils.addAll(qSort(a,L,k),qSort(a,k,R));
+			return result;
 		}
     }
     
@@ -56,14 +57,6 @@ public class Sorts{
 	hi[7]=3;
 	hi[8]=2;
 	hi[9]=4;
-	System.out.println(partition(hi,0,9));
-	System.out.println(partition(hi,0,9));
-	System.out.println(partition(hi,0,9));
-	System.out.println(partition(hi,0,9));
-	System.out.println(partition(hi,0,9));
-	System.out.println(partition(hi,0,9));
-	System.out.println(partition(hi,0,9));
-	System.out.println(partition(hi,0,9));
-	System.out.println(partition(hi,0,9));	
+	System.out.println(toString(qSort(hi)));
     }
 }
