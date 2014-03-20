@@ -1,0 +1,1 @@
+I'm on the robotics trip and have a lot of marketing work to do, so I couldn't complete it. Also, there's no wifi so that's a minus. But I'll get it as soon as possible
