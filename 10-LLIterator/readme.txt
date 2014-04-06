@@ -1,0 +1,1 @@
+I cannot ssh, filezilla or in any other way connect to the homer server because it always times out. Im currently trying to get one of my peers to retrieve my file for me.
