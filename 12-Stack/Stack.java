@@ -54,6 +54,8 @@ public class Stack{
 	}
 	return ans;
     }
-
+    public String peek(){
+	return stuff[top];
+    }
 
 }
